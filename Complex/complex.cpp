@@ -41,7 +41,7 @@ void complex::get(float &real, float &imag){
 	real = r;
 	imag = i;
 }
-
+//template <class T>	//complex<T>::mod(){
 float complex::mod(){
 	return modu = sqrt(pow(r, 2) + pow(i, 2));
 }

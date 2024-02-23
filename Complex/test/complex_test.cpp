@@ -9,13 +9,28 @@
 
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
+#include <iostream>
+#include <chrono>
+
+using std::chrono::high_resolution_clock;
+using std::chrono::duration_cast;
+using std::chrono::duration;
+using std::chrono::milliseconds;
+
+
 
 TEST(complex, test_mod){
+	auto t1 = high_resolution_clock::now();
 	complex c;
 
 	c.set(1,2);
 	float a=sqrt(5);
 	ASSERT_EQ(c.mod(),a);
+
+	auto t2 = high_resolution_clock::now();
+	duration<double, std::milli> ms_double = t2 - t1;
+	std::cout << ms_double.count() << "ms\n";
+
 }
 TEST(complex, test_mod2){
 	complex c;
@@ -41,3 +56,4 @@ TEST(complex, test_igual){
 	complex c_e(3,3);
 	ASSERT_EQ(c_e,c);
 }*/
+

@@ -8,6 +8,7 @@
 #ifndef COMPLEX_H_
 #define COMPLEX_H_
 
+//template <class T>// cambiar float por T
 class complex {
 private:
 	float r, i;

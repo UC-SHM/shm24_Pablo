@@ -7,9 +7,11 @@
 
 #include "complex.h"
 #include <iostream>
+#include <time.h>
 
 #ifndef TEST
 int main(){
+	//clock_t t;
 	complex c(1,2);
 	std::cout << "Modulo " << c.mod();
 	std::cout << "\n";
