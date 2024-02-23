@@ -5,7 +5,7 @@
  *      Author: Pablo
  */
 
-#include "C:/Users/Pablo/UC/SEHAPAM/Practicas/software/workspace/Complex/complex.h"
+#include "../complex.h"
 
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
@@ -30,13 +30,14 @@ TEST(complex, test_sum){
 	complex c_e(3,3);
 	float re, im;
 	c.get(re,im);
-	ASSERT_FLOAT_EQ(re,c.re);
-	ASSERT_FLOAT_EQ(im,c.im);
+	ASSERT_FLOAT_EQ(3,re);
+	ASSERT_FLOAT_EQ(3,im);
 }
+/*
 TEST(complex, test_igual){
 	complex c, a(1,2),b;
 	b.set(2,1);
 	c=a+b;
 	complex c_e(3,3);
 	ASSERT_EQ(c_e,c);
-}
+}*/

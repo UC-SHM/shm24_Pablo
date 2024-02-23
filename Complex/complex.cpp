@@ -46,7 +46,7 @@ float complex::mod(){
 	return modu = sqrt(pow(r, 2) + pow(i, 2));
 }
 
-complex complex::operator+( const complex &rhs) {	//constante porque no se modifica, se para por puntero para no crear un nuevo objeto con la copia de rhs
+complex complex::operator+(const complex &rhs) {	//constante porque no se modifica, se para por puntero para no crear un nuevo objeto con la copia de rhs
 	complex result;
 	result.r = this->r + rhs.r;
 	result.i = this->i + rhs.i ;
@@ -58,7 +58,7 @@ complex complex::operator*( const complex &rhs) {	//constante porque no se modif
 	result.i = (this->r * rhs.i) + (this->i * rhs.r) ;
 	return result;
 }
-complex &complex::operator=( const complex &rhs) {	//constante porque no se modifica, se para por puntero para no crear un nuevo objeto con la copia de rhs
+complex &complex::operator=(const complex &rhs) {	//constante porque no se modifica, se para por puntero para no crear un nuevo objeto con la copia de rhs
 	if(this == &rhs){
 		return *this;
 	}
@@ -66,7 +66,7 @@ complex &complex::operator=( const complex &rhs) {	//constante porque no se modi
 	i=rhs.i;
 	return *this;
 }
-bool complex::operator==( const complex &rhs){
+bool complex::operator==(const complex &rhs){
 	bool ret;
 	if(r == rhs.r && i == rhs.i){
 		ret = true;

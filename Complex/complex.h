@@ -30,7 +30,7 @@ public:
 	complex operator+(const complex &rhs);
 	complex &operator=(const complex &rhs);
 	complex operator*(const complex &rhs);
-	bool operator==( const complex &rhs);
+	bool operator==(const complex &rhs);
 
 	complex();
 	complex(float real, float imag);
