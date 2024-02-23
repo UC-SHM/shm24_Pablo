@@ -48,6 +48,15 @@ TEST(complex, test_sum){
 	ASSERT_FLOAT_EQ(3,re);
 	ASSERT_FLOAT_EQ(3,im);
 }
+TEST(complex, test_mul){
+	complex c, a(1,2),b;
+	b.set(2,1);
+	c=a*b;
+	float re, im;
+	c.get(re,im);
+	ASSERT_FLOAT_EQ(0,re);
+	ASSERT_FLOAT_EQ(5,im);
+}
 /*
 TEST(complex, test_igual){
 	complex c, a(1,2),b;
